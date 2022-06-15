@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
+    // Mario is the best
 
     @SuppressLint("WrongViewCast")
     @Override
