@@ -21,7 +21,6 @@ public class LoginActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etPassword;
     private Button btnLogin;
-    // Mario is the best
 
     @SuppressLint("WrongViewCast")
     @Override
@@ -45,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser(username,password);
             }
         });
-
     }
     private void loginUser(String username, String password){
         Log.i(TAG,"Attempting to login user" + username);
@@ -64,7 +62,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
-
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
