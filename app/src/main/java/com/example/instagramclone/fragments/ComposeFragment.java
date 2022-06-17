@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,7 @@ import java.util.List;
 
 public class ComposeFragment extends Fragment {
     public static final String TAG = "ComposeFragment";
-    public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 42;
+    public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 10;
     private EditText etDescription;
     private Button btnCaptureImage;
     private ImageView ivPostImage;
@@ -114,7 +115,9 @@ public class ComposeFragment extends Fragment {
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE) {
+            Log.i(TAG, "onActivityResult: ");
             if (resultCode == RESULT_OK) {
+                Log.i(TAG, "onActivityResult2: ");
                 // by this point we have the camera photo on disk
                 Bitmap takenImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
                 // RESIZE BITMAP, see section below
@@ -131,8 +134,8 @@ public class ComposeFragment extends Fragment {
         // This way, we don't need to request external read/write runtime permissions.
         File mediaStorageDir = new File(getContext().getExternalFilesDir(Environment.DIRECTORY_PICTURES), TAG);
         // Return the file target for the photo based on filename
-        File file = new File(mediaStorageDir.getPath() + File.separator + fileName);
-        return file;
+        return new File(mediaStorageDir.getPath() + File.separator + fileName);
+
     }
     private void savePost(String description, ParseUser currentUser, File photoFile) {
         Post post = new Post();
