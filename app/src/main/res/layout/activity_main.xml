@@ -13,56 +13,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="20dp"
-        android:text="LOGOUT"
-        android:onClick="onClickBtn"/>
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="63dp"
+        android:onClick="onClickBtn"
+        android:text="LOGOUT" />
 
-    <EditText
-        android:id="@+id/etDescription"
-        android:layout_width="386dp"
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="14dp"
-        android:ems="10"
-        android:hint="Description..."
-        android:inputType="textPersonName" />
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="384dp"
-        android:layout_height="216dp"
-        android:layout_below="@+id/btnCaptureImage"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnCaptureImage"
-        android:layout_width="384dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="11dp"
-        android:text="Take Picture" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="388dp"
-        android:layout_height="46dp"
-        android:layout_below="@+id/ivPostImage"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginBottom="335dp"
-        android:text="submit" />
+        app:menu="@menu/menu_bottom_navigation" />
+
 
 </RelativeLayout>
