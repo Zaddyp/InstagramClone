@@ -16,7 +16,6 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
-
     public static final String TAG = "LoginActivity";
     private EditText etUsername;
     private EditText etPassword;
@@ -27,7 +26,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         if (ParseUser.getCurrentUser() != null){
             goMainActivity();
         }
@@ -45,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
     private void loginUser(String username, String password){
-
         // navigates to the main activity if the user has signed in properly
         ParseUser.logInInBackground(username, password, new LogInCallback() {
             @Override
