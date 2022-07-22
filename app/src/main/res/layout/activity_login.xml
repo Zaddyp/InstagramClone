@@ -34,7 +34,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="58dp"
-        android:layout_marginTop="397dp"
+        android:layout_marginTop="366dp"
         android:ems="10"
         android:hint="username"
         android:inputType="textPersonName"
@@ -60,6 +60,15 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUsername" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="126dp"
+        android:layout_height="93dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="176dp"
+        app:srcCompat="@drawable/icon" />
 
 
 </RelativeLayout>
